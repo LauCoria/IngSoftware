@@ -1,0 +1,187 @@
+
+//clases centerBold y borderPadding para usarlo en include
+.centerBold{
+    text-align: center;
+    font-weight: $weightBold;
+}
+
+.borderPadding{
+    border: 1px solid $tituloSecAndBorderColor;
+    padding: 5px;
+}
+
+//fin de clases de include
+//mixin
+@mixin sizeWeight($size,$weight){
+    font-size:$size;
+    font-weight:$weight;
+}
+
+@mixin borderAndRadius($border,$radius){
+    border: $border;
+    border-radius: $radius;
+}
+
+
+.miTitulo {    
+    font-family: $fontMerienda;
+    font-size: map-get($tamanoTexto, textGrandeM);
+    color: $magentacolor;
+    @extend .centerBold;   
+}
+
+body {
+    background-image: url(../img/burbujas_fondo.jpg);
+    background-size: 150px;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+section{
+    article{
+        p{
+            @include sizeWeight(map-get($tamanoTexto, textChikiL),$weightGrueso)
+        }
+        .btn{
+            border-radius: 20px;
+            padding: 5px;
+            color: $blackColor;
+            @include sizeWeight( map-get($tamanoTexto, textChikiS),$weightGrueso );
+            border: solid 2px $magentacolor;
+            background: linear-gradient(to top, $btninicioColor, $btnfinalColor);
+            &:hover{
+                transform: scale(0.95, 0.95);
+                font-size: map-get($tamanoTexto, textChikiM);
+                transition: all 0.3s;
+                border: solid 2px $magentacolor;
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+
+.subtitulo {   
+    @extend .centerBold;
+    font-style: italic;
+    font-size: map-get($tamanoTexto, textGrandeS);
+}
+
+main{
+    div{
+        text-align: center;
+        margin: 50px;
+        img{
+            width: 20%;
+        }
+    }
+}
+
+.logoSecundario {
+    width: 10%;
+    border-radius: 35px;
+}
+
+.capitalLetter {
+    font-size: map-get($tamanoTexto, textGrandeL);
+}
+
+.miMapa {
+    display: inline-block;
+    width: 80%;
+    @include borderAndRadius(solid 3px $greenBorderMapaColor, 20px);
+    overflow: hidden;
+    margin: 0px;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+}
+
+.tituloSecundario {
+    color: $tituloSecAndBorderColor;
+}
+
+.miTabla {
+    display: inline-block;
+    font-size:  map-get($tamanoTexto, textChikiS);
+    border-collapse: collapse;
+    background-color: $btninicioColor;
+    @include borderAndRadius(1px solid $tituloSecAndBorderColor,10px );
+    overflow: hidden;
+}
+
+
+
+th {
+    font-size:  map-get($tamanoTexto, textChikiL);
+    background-color: $tituloTablaColor;
+    @extend .borderPadding;
+}
+
+td {
+    @extend .borderPadding;
+}
+
+form {
+    @include sizeWeight( map-get($tamanoTexto, textChikiS),$weightBold );
+    width: 30%;
+    display: inline-block;
+    padding: 20px;
+    border: solid 1px;
+    background-color: $greenFormColor;
+    border-radius: 20px;
+    font-family: $fontMerienda;
+    input,select{
+        margin-bottom: 20px;
+    }
+    label{
+        margin-bottom: 10px;
+    }
+    .cajaForm{
+        margin: 0px;
+    }
+    
+    @media only Screen and (max-width:720px) {
+        width: 80%;
+    }
+}
+
+.inputText {
+    text-align: center;
+    width: 90%;
+    font-size: map-get($tamanoTexto, textChikiS);
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.textLabel {
+    font-size: map-get($tamanoTexto, textChikiS);
+    color: $tituloSecAndBorderColor;
+}
+
+
+div{
+    article{
+        .img-thumbnail{
+            min-height: 256px;
+            @media only Screen and (min-width:1000px) {
+                max-height: 256px;
+            }
+        }
+    }
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.centrarElemento {
+    text-align: center;
+}

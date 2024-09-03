@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+* {
+    margin: 0px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+nav ul li {
+    font-size: 2rem;
+    margin: 0px 20px;  
+    font-weight: bold;
+}
+
+.nav-link:hover:not(.dropdown-toggle),
+.navbar-brand:hover {
+    /* text-decoration: none; */
+    transform: scale(1.3, 1.3);
+    transition: transform 0.3s;
+}
+
+.bg-miNav {
+    background: linear-gradient(to top, #DEC6D0, #72BEA2);
+}
+
+.logo {
+    width: 50px;
+    display: inline-block;
+    border-radius: 25px;
+    border: solid 1px green;
+}
+
+header {
+    text-align: center;
+}
+
+header img {
+    width: 80%;
+    border-radius: 10px;
+}
+.imgCarrusel {
+    height: 70vh;
+}
+
+
+
+.miTitulo {
+    text-align: center;
+    font-family: 'Merienda';
+    font-size: 3rem;
+    color: darkmagenta;
+    font-weight: bold;
+}
+
+body {
+    background-color: #c4a661;
+    background-size: 150px;
+    background: linear-gradient(to top, #FEFEFE,#ddc283);
+    background-attachment: fixed;
+    min-height: 100vh; }
+
+section article p {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.subtitulo {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+main div img {
+    width: 20%;
+}
+
+main div {
+    text-align: center;
+    margin: 50px;
+}
+
+.logoSecundario {
+    width: 10%;
+    border-radius: 35px;
+}
+
+section article .btn {
+    border-radius: 20px;
+    padding: 5px;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 900;
+    border: solid 2px darkmagenta;
+    background: linear-gradient(to top, #DEC6D0, rgb(230, 133, 230));
+}
+
+section article .btn:hover {
+    transform: scale(0.95, 0.95);
+    font-size: 1.3rem;
+    transition: all 0.3s;
+    border: solid 2px darkmagenta;
+    transition: all 0.3s;
+}
+
+.capitalLetter {
+    font-size: 4rem;
+}
+
+.miMapa {
+    display: inline-block;
+    width: 80%;
+    border: solid 3px #72BEA2;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0px;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+}
+
+.tituloSecundario {
+    color: #EB8078;
+}
+
+.miTabla {
+    display: inline-block;
+    font-size: 1.2rem;
+    border-collapse: collapse;
+    background-color: #DEC6D0;
+    border: 1px solid #EB8078;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    font-size: 1.5rem;
+    background-color: #a3bbb2;
+}
+
+th,
+td {
+    border: 1px solid #EB8078;
+    padding: 5px;
+}
+
+.centrarElemento {
+    text-align: center;
+}
+
+form {
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 30%;
+    display: inline-block;
+    padding: 20px;
+    border: solid 1px;
+    background-color: #b5ebd7;
+    border-radius: 20px;
+    font-family: 'Merienda';
+}
+
+.inputText {
+    text-align: center;
+    width: 90%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.textLabel {
+    font-size: 1.2rem;
+    color: #000;
+
+}
+
+
+
+div article .img-thumbnail {
+    min-height: 256px;
+}
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+footer {
+    background: url(../img/footer.jpg);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+
+footer img {
+    width: 70px;
+    margin: 0px 20px;
+}
+footer p{
+    font-weight: 900;
+}
+
+
+
+
+@media only Screen and (max-width:700px) {
+    .imgCarrusel {
+        height: 40vh;
+
+    }
+}
+
+@media only Screen and (min-width:1000px) {
+    div article .img-thumbnail {
+        max-height: 256px;
+    }
+}
